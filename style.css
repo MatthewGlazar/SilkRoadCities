@@ -4,6 +4,12 @@
  */
 #map {
   height: 100%;
+  float: left;
+}
+
+#right{
+  float: right;
+  color: blue;
 }
 
 /*
