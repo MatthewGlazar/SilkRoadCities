@@ -1,19 +1,137 @@
 <!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
 <html>
   <head>
     <title>Cities of the Silk Road</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./main.js"></script>
+    <script type="module">
+        let map;
+
+        async function initMap() {
+          // The location of Uluru
+          const position = { lat: 41.013889, lng: 28.955556 };
+          const position2 = { lat: 39.654722, lng: 66.975833 };
+          // Request needed libraries.
+          //@ts-ignore
+          const { Map } = await google.maps.importLibrary("maps");
+          //const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+
+          // The map, centered at Uluru
+          map = new Map(document.getElementById("map"), {
+          zoom: 4,
+          center: position,
+          mapId: "DEMO_MAP_ID",
+          });
+
+          const image = "./icons/city_marker.png";
+
+          const mapContainer = document.getElementById('mapCont');
+          const div = document.createElement('div');
+          div.id = "cityInfo";
+          let cityName = document.createElement("h2");
+          cityName.innerText = "City Name";
+          let par = document.createElement("p");
+          let img = document.createElement("img");
+          img.src = "./images/constantinople.jpg."
+          par.innerText = `At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+            et quas molestias excepturi sint occaecati cupiditate non provident,
+            similique sunt in culpa qui officia deserunt mollitia animi, id est
+            laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+            distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
+            nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+            debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+            maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+            debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recu maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+            debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au
+            maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+            debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au
+            maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+            debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au
+            maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+            debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au
+            maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+            debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au
+            sandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au
+            maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+            debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au
+            reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
+            repellat.`;
+
+          let close = document.createElement('button');
+          close.innerText = "X";
+          close.addEventListener("click", () => {
+            close.parentElement.style.display = 'none';
+          });
+
+          div.appendChild(close);
+          div.appendChild(cityName);
+          div.append(img);
+          div.appendChild(par);
+          mapContainer.appendChild(div);
+
+
+          new google.maps.Marker({
+          position: position,
+          map,
+          title: "City Name",
+          icon: image,
+          }).addListener("click", () => {
+            map.setCenter(position);
+            map.setZoom(6);
+            let pop = document.getElementById("cityInfo");
+            pop.children[1].innerText = "City1";
+            pop.style.display ='block';
+          });
+
+          new google.maps.Marker({
+          position: position2,
+          map,
+          title: "City Name 2",
+          icon: image,
+          }).addListener("click", () => {
+            map.setCenter(position2);
+            map.setZoom(6);
+            let pop = document.getElementById("cityInfo");
+            pop.children[1].innerText = "City2";
+            document.getElementById("cityInfo").style.display ='block';
+          });
+
+
+        }
+
+        initMap();
+    </script>
   </head>
   <body>
-    <h3>Cities of the Silk Road</h3>
+    <h2>Cities of the Silk Road</h2>
+    <h5>By Matthew Glazar</h5>
     <!--The div element for the map -->
-    <div id="map" class="half"></div>
-    <div id="right" class="half">
+    <div id = "intro">
       <h2>Introduction</h2>
-      <p>
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+      <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
         sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
         consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
@@ -21,12 +139,16 @@
         incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
         exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
         vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-        dolorem eum fugiat quo voluptas nulla pariatur?"
-      </p>
+        dolorem eum fugiat quo voluptas nulla pariatur?"</p>
     </div>
+    <div id="mapCont">
+      <div id="map"></div>
+    </div>
+
 
     <!-- prettier-ignore -->
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyDqOf6kccEi8lbAno2-Jl_7U_N4TeQA0Oc", v: "weekly"});</script>
+        ({key: "AIzaSyA8M6cEtQ3LeQcg3ikNlkAH5xnS6b214iw", v: "weekly"});</script>
   </body>
 </html>
+

@@ -1,3 +1,4 @@
+/*
 let map;
 
 async function initMap() {
@@ -40,4 +41,4 @@ async function initMap() {
 
 }
 
-initMap();
+initMap(); */
