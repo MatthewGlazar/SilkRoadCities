@@ -86,10 +86,20 @@
             close.parentElement.style.display = 'none';
           });
 
+          let citations = document.createElement("div");
+          citations.innerHTML = `
+          <p>
+            <sup>1</sup>Source1<br>
+            <sup>2</sup>Source2
+          </p>
+          `;
+
           div.appendChild(close);
           div.appendChild(cityName);
-          div.append(img);
+          div.appendChild(img);
           div.appendChild(par);
+          div.appendChild(citations);
+
           mapContainer.appendChild(div);
 
 
