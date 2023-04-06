@@ -22,16 +22,7 @@ async function initMap() {
   const div = document.createElement('div');
   div.id = "cityInfo";
 
-  let close = document.createElement('button');
-  close.innerText = "X";
-  close.addEventListener("click", () => {
-	close.parentElement.style.display = 'none';
-  });
-
-  div.appendChild(close);
-
   mapContainer.appendChild(div);
-
 
   new google.maps.Marker({
   position: position,
