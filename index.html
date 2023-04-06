@@ -8,6 +8,7 @@
   <head>
     <title>Cities of the Silk Road</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="jquery.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script type="module">
@@ -34,12 +35,13 @@
           const mapContainer = document.getElementById('mapCont');
           const div = document.createElement('div');
           div.id = "cityInfo";
-          let cityName = document.createElement("h2");
-          cityName.innerText = "City Name";
-          let par = document.createElement("p");
-          let img = document.createElement("img");
-          img.src = "./images/constantinople.jpg"
-          par.innerText = `At vero eos et accusamus et iusto odio dignissimos ducimus qui
+
+          //let cityName = document.createElement("h2");
+          //cityName.innerText = "City Name";
+          //let par = document.createElement("p");
+          //let img = document.createElement("img");
+          //img.src = "./images/constantinople.jpg"
+          /*par.innerText = ` At vero eos et accusamus et iusto odio dignissimos ducimus qui
             blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
             et quas molestias excepturi sint occaecati cupiditate non provident,
             similique sunt in culpa qui officia deserunt mollitia animi, id est
@@ -78,7 +80,7 @@
             debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
             molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au
             reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-            repellat.`;
+            repellat.`; */
 
           let close = document.createElement('button');
           close.innerText = "X";
@@ -86,19 +88,20 @@
             close.parentElement.style.display = 'none';
           });
 
-          let citations = document.createElement("div");
+          /* let citations = document.createElement("div");
           citations.innerHTML = `
           <p>
             <sup>1</sup>Source1<br>
             <sup>2</sup>Source2
           </p>
-          `;
+          `; */
 
           div.appendChild(close);
-          div.appendChild(cityName);
-          div.appendChild(img);
-          div.appendChild(par);
-          div.appendChild(citations);
+
+          //div.appendChild(cityName);
+         // div.appendChild(img);
+          //div.appendChild(par);
+          //div.appendChild(citations);
 
           mapContainer.appendChild(div);
 
@@ -112,7 +115,7 @@
             map.setCenter(position);
             map.setZoom(6);
             let pop = document.getElementById("cityInfo");
-            pop.children[1].innerText = "City1";
+            pop.load("./test.html");
             pop.style.display ='block';
           });
 
@@ -125,8 +128,8 @@
             map.setCenter(position2);
             map.setZoom(6);
             let pop = document.getElementById("cityInfo");
-            pop.children[1].innerText = "City2";
-            document.getElementById("cityInfo").style.display ='block';
+            pop.load("./test2.html");
+            pop.style.display ='block';
           });
 
 
