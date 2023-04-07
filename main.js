@@ -47,7 +47,7 @@ async function initMap() {
   }).addListener("click", () => {
 	map.setCenter(position2);
 	map.setZoom(6);
-	$("#cityInfo").load("./cityData//test2.html");
+	$("#cityInfo").load("./cityData/test2.html");
 	let pop = document.getElementById("cityInfo");
 	pop.style.display ='block';
   });
