@@ -1,4 +1,4 @@
-import cities from './cityData/cities.json' assert { type: 'JSON' };
+import cities from './cityData/cities.json' assert { type: 'json' };
 let map;
 
 async function initMap() {
