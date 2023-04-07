@@ -26,6 +26,7 @@ async function initMap() {
   div.style.display = 'none';
 
   div.addEventListener('load', ()=> {
+    console.log("City Info Loaded");
     let cityName = document.getElementById("cityName").innerText;
     let lat = document.getElementById("coords").getAttribute("lat");
     let long = document.getElementById("coords").getAttribute("long");
@@ -54,7 +55,7 @@ async function initMap() {
   ];
 
   cities.forEach(city => {
-    $("#cityInfo").load("./cityData/test.html");
+    $("#cityInfo").load(city);
   });
 
 }
