@@ -20,19 +20,16 @@ async function initMap() {
 
   const mapContainer = document.getElementById('mapCont');
 
-  const buttonDiv = document.createElement("div");
-  const button = document.createElement("button");
-  button.innerText = 'X';
-  buttonDiv.appendChild(button);
-  buttonDiv.addEventListener('click', () => {
-	let close = document.getElementById('closeButton');
-	close.parentElement.style.display = 'none';
-  });
-
   const div = document.createElement('div');
   div.id = "cityInfo";
 
-  mapContainer.appendChild(buttonDiv);
+  const button = document.createElement("button");
+  button.innerText = 'X';
+  button.addEventListener('click', () => {
+	let close = document.getElementById('cityInfo');
+	close.style.display = 'none';
+  });
+
   mapContainer.appendChild(div);
 
   new google.maps.Marker({
@@ -45,6 +42,7 @@ async function initMap() {
 	map.setZoom(6);
 	$("#cityInfo").load("./cityData/test.html");
 	let pop = document.getElementById("cityInfo");
+	pop.insertBefore(button, pop.firstChild); //insert button at top of popup
 	pop.style.display ='block';
   });
 
@@ -58,6 +56,7 @@ async function initMap() {
 	map.setZoom(6);
 	$("#cityInfo").load("./cityData//test2.html");
 	let pop = document.getElementById("cityInfo");
+	pop.insertBefore(button, pop.firstChild); //insert button at top of popup
 	pop.style.display ='block';
   });
 
