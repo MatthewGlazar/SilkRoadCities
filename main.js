@@ -36,7 +36,6 @@ async function initMap() {
 	map.setZoom(6);
 	$("#cityInfo").load("./cityData/test.html");
 	let pop = document.getElementById("cityInfo");
-	pop.insertBefore(button, pop.firstChild); //insert button at top of popup
 	pop.style.display ='block';
   });
 
@@ -50,7 +49,6 @@ async function initMap() {
 	map.setZoom(6);
 	$("#cityInfo").load("./cityData//test2.html");
 	let pop = document.getElementById("cityInfo");
-	pop.insertBefore(button, pop.firstChild); //insert button at top of popup
 	pop.style.display ='block';
   });
 
