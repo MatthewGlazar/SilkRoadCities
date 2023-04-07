@@ -1,3 +1,4 @@
+import cities from './cityData/cities.json' assert { type: 'JSON' };
 let map;
 
 async function initMap() {
@@ -49,15 +50,10 @@ async function initMap() {
   mapContainer.appendChild(div);
 
 
-  const cities = [
-    "./cityData/Chang'an.html",
-    "./cityData/Samarkand.html",
-  ];
-
-  cities.forEach(city => {
-    $("#cityInfo").load(city);
-  });
+  console.log(cities);
 
 }
 
+
+//$("#cityInfo").load(city);
 initMap();

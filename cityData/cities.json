@@ -1,5 +1,15 @@
 {
 	"cities": {
+		"Chang'an": {
+			"lat": 34.308333,
+			"long":108.858333,
+			"detailed": true
+		},
+		"Samarkand": {
+			"lat": 39.654722,
+			"long": 66.975833,
+			"detailed": true
+		},
 		"Balkh": {
 			"lat": 36.758056,
 			"long": 66.898056
@@ -26,18 +36,18 @@
 		},
         "Kashgar": {
 			"lat": 39.4677,
-			"long": xxxx
+			"long": 0
 		},
         "Agra": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Delhi": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Isfahan": {
-			"lat": 32.644722            ,
+			"lat": 32.644722,
 			"long": 51.6675
 		},
 		"Yazd": {
@@ -45,40 +55,40 @@
 			"long": 54.367778
 		},
         "Jordan": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Petra": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Karakorum": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Palmyra": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Bursa": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Ephesus": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Constantinople": {
 			"lat": 28.955556,
 			"long": 28.955556
 		},
         "Bukhara": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Kesh": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		},
         "Gyeongju": {
 			"lat": 35.85,
@@ -109,8 +119,8 @@
 			"long": 29.8925
 		},
         "Tehran": {
-			"lat": xxxx,
-			"long": xxxx
+			"lat": 0,
+			"long": 0
 		}
 	}
 }
