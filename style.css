@@ -4,10 +4,18 @@
 }
 
 #intro, #bib {
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 33%;
+  padding-right: 33%;
   padding-bottom: 10px;
+  text-align:justify;
+}
+
+#intro > h2, #bib > h2 {
   text-align: center;
+}
+
+#intro > p {
+  text-indent: 25px;
 }
 
 h5 {
@@ -61,5 +69,5 @@ html, body, #mapCont {
 }
 
 #cityInfo > p {
-  text-indent: 50px;
+  text-indent: 25px;
 }
