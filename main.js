@@ -29,7 +29,7 @@ async function initMap() {
 
 
   for (var city in cities) {
-    console.log(city);
+    console.log(city["lat"]);
   }
 
   div.addEventListener('change', ()=> {
@@ -56,7 +56,7 @@ async function initMap() {
   mapContainer.appendChild(div);
 
 
-  console.log(cities);
+  //console.log(cities);
 
 }
 
