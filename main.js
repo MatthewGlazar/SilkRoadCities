@@ -26,6 +26,12 @@ async function initMap() {
   div.id = "cityInfo";
   div.style.display = 'none';
 
+
+
+  for (var city in cities) {
+    console.log(city);
+  }
+
   div.addEventListener('change', ()=> {
     console.log("City Info Loaded");
     let cityName = document.getElementById("cityName").innerText;
