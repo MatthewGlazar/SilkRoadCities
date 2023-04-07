@@ -11,8 +11,8 @@ async function initMap() {
 
   // The map, centered at Uluru
   map = new Map(document.getElementById("map"), {
-  zoom: 4,
-  center: position,
+  zoom: 2,
+  center: {lat: 39.533599785886885, lng: 83.49064664524137},
   mapId: "DEMO_MAP_ID",
   });
 
@@ -37,7 +37,7 @@ async function initMap() {
     let cityName = document.getElementById("cityName").innerText;
     let lat = document.getElementById("coords").getAttribute("lat");
     let long = document.getElementById("coords").getAttribute("long");
-    let position = {lat, long};
+    let position = {lat: lat, lng: long};
 
     new google.maps.Marker({
       position: position,
