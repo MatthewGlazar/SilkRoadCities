@@ -1,0 +1,116 @@
+{
+	"cities": {
+		"Balkh": {
+			"lat": 36.758056,
+			"long": 66.898056
+		},
+        "Bamiyan": {
+			"lat": 34.8100,
+			"long": 67.8212
+		},
+        "Herat": {
+			"lat": 34.3529,
+			"long": 62.2040
+		},
+        "Almaliq": {
+			"lat": 44.24,
+			"long": 80.533056
+		},
+        "Beijing": {
+			"lat": 39.9042,
+			"long": 116.4074
+		},
+        "Dunhuang": {
+			"lat": 40.141111,
+			"long": 94.663889
+		},
+        "Kashgar": {
+			"lat": 39.4677,
+			"long": xxxx
+		},
+        "Agra": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Delhi": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Isfahan": {
+			"lat": 32.644722            ,
+			"long": 51.6675
+		},
+		"Yazd": {
+			"lat": 31.897222,
+			"long": 54.367778
+		},
+        "Jordan": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Petra": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Karakorum": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Palmyra": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Bursa": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Ephesus": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Constantinople": {
+			"lat": 28.955556,
+			"long": 28.955556
+		},
+        "Bukhara": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Kesh": {
+			"lat": xxxx,
+			"long": xxxx
+		},
+        "Gyeongju": {
+			"lat": 35.85,
+			"long": 129.216667
+		},
+        "Baku": {
+			"lat": 40.395278,
+			"long": 49.882222
+		},
+        "Halab": {
+			"lat": 36.2,
+			"long": 37.16
+		},
+        "Heijo-kyo": {
+			"lat": 34.684444,
+			"long": 135.805
+		},
+        "Jeddah": {
+			"lat": 21.543333,
+			"long": 39.172778
+		},
+        "Venice": {
+			"lat": 45.4375,
+			"long": 12.335833
+		},
+        "Alexandria": {
+			"lat": 31.1975,
+			"long": 29.8925
+		},
+        "Tehran": {
+			"lat": xxxx,
+			"long": xxxx
+		}
+	}
+}
