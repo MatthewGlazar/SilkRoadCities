@@ -29,7 +29,7 @@ async function initMap() {
 
 
   for (var city in cities) {
-    console.log(cities[city]["lat"]);
+    console.log(cities.keys);
   }
 
   div.addEventListener('change', ()=> {
