@@ -23,11 +23,11 @@ async function initMap() {
   const buttonDiv = document.createElement("div");
   const button = document.createElement("button");
   button.innerText = 'X';
-  button.addEventListener('click', () => {
+  buttonDiv.appendChild(button);
+  buttonDiv.addEventListener('click', () => {
 	let close = document.getElementById('closeButton');
 	close.parentElement.style.display = 'none';
   });
-  buttonDiv.appendChild(button);
 
   const div = document.createElement('div');
   div.id = "cityInfo";
