@@ -19,9 +19,20 @@ async function initMap() {
   const image = "./icons/city_marker.png";
 
   const mapContainer = document.getElementById('mapCont');
+
+  const buttonDiv = document.createElement("div");
+  const button = document.createElement("button");
+  button.innerText = 'X';
+  button.addEventListener('click', () => {
+	let close = document.getElementById('closeButton');
+	close.parentElement.style.display = 'none';
+  });
+  buttonDiv.appendChild(button);
+
   const div = document.createElement('div');
   div.id = "cityInfo";
 
+  mapContainer.appendChild(buttonDiv);
   mapContainer.appendChild(div);
 
   new google.maps.Marker({
@@ -33,11 +44,7 @@ async function initMap() {
 	map.setCenter(position);
 	map.setZoom(6);
 	$("#cityInfo").load("./cityData/test.html");
-	let close = document.getElementById('closeButton');
 	let pop = document.getElementById("cityInfo");
-	close.addEventListener('click', () => {
-		pop.style.display = 'none';
-	});
 	pop.style.display ='block';
   });
 
@@ -51,10 +58,6 @@ async function initMap() {
 	map.setZoom(6);
 	$("#cityInfo").load("./cityData//test2.html");
 	let pop = document.getElementById("cityInfo");
-	let close = document.getElementById('closeButton');
-	close.addEventListener('click', () => {
-		pop.style.display = 'none';
-	});
 	pop.style.display ='block';
   });
 
