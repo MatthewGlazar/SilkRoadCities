@@ -33,24 +33,26 @@ async function initMap() {
   ];
 
   cities.forEach(city => {
-    $("#cityInfo").load("./cityData/test.html");
-    //let cityName = document.getElementById("cityName").innerText;
-    let cityname = "Name";
-    let lat = document.getElementById("coords").getAttribute("lat");
-    let long = document.getElementById("coords").getAttribute("long");
-    let position = {lat: lat, lng: long};
+    $("#cityInfo").load("./cityData/test.html").then(() => {
+        let cityName = document.getElementById("cityName").innerText;
+        let lat = document.getElementById("coords").getAttribute("lat");
+        let long = document.getElementById("coords").getAttribute("long");
+        let position = {lat: lat, lng: long};
 
-    new google.maps.Marker({
-      position: position,
-      map,
-      title: cityName,
-      icon: image,
-      }).addListener("click", () => {
-        map.setCenter(position);
-        map.setZoom(6);
-        let pop = document.getElementById("cityInfo");
-        pop.style.display ='block';
-    });
+        new google.maps.Marker({
+          position: position,
+          map,
+          title: cityName,
+          icon: image,
+          }).addListener("click", () => {
+            $("#cityInfo").load("./cityData/test.html");
+            map.setCenter(position);
+            map.setZoom(6);
+            let pop = document.getElementById("cityInfo");
+            pop.style.display ='block';
+        });
+    })
+
 
   });
 
