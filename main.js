@@ -1,12 +1,5 @@
 let map;
 
-function closePopup(){
-	let close = document.getElementById('closeButton');
-	close.addEventListener('click', () => {
-		close.parentElement.style.display = 'none';
-	});
-}
-
 async function initMap() {
   // The location of Uluru
   const position = { lat: 41.013889, lng: 28.955556 };
