@@ -42,8 +42,8 @@ async function initMap() {
             title: cityName,
             icon: detailedIcon,
             }).addListener("click", () => {
-                $("#cityInfo").load("./cityData/test.html");
-                map.setCenter(position);
+                $("#cityInfo").load("./cityData/" + cityName + ".html");
+                map.setCenter(pos);
                 map.setZoom(6);
                 let pop = document.getElementById("cityInfo");
                 pop.style.display ='block';
