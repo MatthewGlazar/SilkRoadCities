@@ -28,9 +28,7 @@ async function initMap() {
 
 
 
-  for (var city in cities) {
-    console.log(cities.keys);
-  }
+  console.log(Object.keys(cities));
 
   div.addEventListener('change', ()=> {
     console.log("City Info Loaded");
