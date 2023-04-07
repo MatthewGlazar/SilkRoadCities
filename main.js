@@ -1,4 +1,4 @@
-import cities from './cityData/cities.json' assert { type: 'json' };
+import json from './cityData/cities.json' assert { type: 'json' };
 let map;
 
 async function initMap() {
@@ -18,7 +18,8 @@ async function initMap() {
   mapId: "DEMO_MAP_ID",
   });
 
-  const image = "./icons/city_marker.png";
+  const icon = "./icons/city_marker.png";
+  const detailedIcon = "./icons/detailed_marker.png";
 
   const mapContainer = document.getElementById('mapCont');
 
@@ -27,8 +28,36 @@ async function initMap() {
   div.style.display = 'none';
 
 
-
+  let cities = json["cities"];
   console.log(Object.keys(cities));
+
+  Object.keys(cities).forEach(cityName => {
+    let city = cities[cityName];
+    let pos = {lat: city["lat"], lng: city["long"]};
+
+    if (city['detailed'] != null){
+        new google.maps.Marker({
+            position: pos,
+            map,
+            title: cityName,
+            icon: detailedIcon,
+            }).addListener("click", () => {
+                $("#cityInfo").load("./cityData/test.html");
+                map.setCenter(position);
+                map.setZoom(6);
+                let pop = document.getElementById("cityInfo");
+                pop.style.display ='block';
+            });
+    }
+    else {
+        new google.maps.Marker({
+            position: pos,
+            map,
+            title: cityName,
+            icon: icon,
+        });
+    }
+  });
 
   div.addEventListener('change', ()=> {
     console.log("City Info Loaded");
