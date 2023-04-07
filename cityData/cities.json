@@ -36,15 +36,15 @@
 		},
         "Kashgar": {
 			"lat": 39.4677,
-			"long": 0
+			"long": 75.9938
 		},
         "Agra": {
-			"lat": 0,
-			"long": 0
+			"lat": 27.1767,
+			"long": 78.0081
 		},
         "Delhi": {
-			"lat": 0,
-			"long": 0
+			"lat": 28.7041,
+			"long": 77.1025
 		},
         "Isfahan": {
 			"lat": 32.644722,
@@ -54,41 +54,37 @@
 			"lat": 31.897222,
 			"long": 54.367778
 		},
-        "Jordan": {
-			"lat": 0,
-			"long": 0
-		},
         "Petra": {
-			"lat": 0,
-			"long": 0
+			"lat": 30.3216,
+			"long": 35.4801
 		},
         "Karakorum": {
-			"lat": 0,
-			"long": 0
+			"lat": 47.1900,
+			"long": 102.8340
 		},
         "Palmyra": {
-			"lat": 0,
-			"long": 0
+			"lat": 40.3090,
+			"long": 76.5933
 		},
         "Bursa": {
-			"lat": 0,
-			"long": 0
+			"lat": 40.1885,
+			"long": 29.0610
 		},
         "Ephesus": {
-			"lat": 0,
-			"long": 0
+			"lat": 37.941111,
+			"long": 27.341944
 		},
         "Constantinople": {
-			"lat": 28.955556,
-			"long": 28.955556
+			"lat": 41.0082,
+			"long": 28.9784
 		},
         "Bukhara": {
-			"lat": 0,
-			"long": 0
+			"lat": 39.766667,
+			"long": 64.433333
 		},
         "Kesh": {
-			"lat": 0,
-			"long": 0
+			"lat": 39.05,
+			"long": 66.833333
 		},
         "Gyeongju": {
 			"lat": 35.85,
@@ -119,8 +115,8 @@
 			"long": 29.8925
 		},
         "Tehran": {
-			"lat": 0,
-			"long": 0
+			"lat": 35.7219,
+			"long": 51.3347
 		}
 	}
 }
