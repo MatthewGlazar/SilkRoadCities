@@ -25,7 +25,7 @@ async function initMap() {
   div.id = "cityInfo";
   div.style.display = 'none';
 
-  div.addEventListener('load', ()=> {
+  div.addEventListener('change', ()=> {
     console.log("City Info Loaded");
     let cityName = document.getElementById("cityName").innerText;
     let lat = document.getElementById("coords").getAttribute("lat");
