@@ -33,7 +33,11 @@ async function initMap() {
 	map.setCenter(position);
 	map.setZoom(6);
 	$("#cityInfo").load("./cityData/test.html");
+	let close = document.getElementById('closeButton');
 	let pop = document.getElementById("cityInfo");
+	close.addEventListener('click', () => {
+		pop.style.display = 'none';
+	});
 	pop.style.display ='block';
   });
 
@@ -47,6 +51,10 @@ async function initMap() {
 	map.setZoom(6);
 	$("#cityInfo").load("./cityData//test2.html");
 	let pop = document.getElementById("cityInfo");
+	let close = document.getElementById('closeButton');
+	close.addEventListener('click', () => {
+		pop.style.display = 'none';
+	});
 	pop.style.display ='block';
   });
 
