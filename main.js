@@ -6,6 +6,7 @@ async function initMap() {
   //const position2 = { lat: 39.654722, lng: 66.975833 };
   // Request needed libraries.
   //@ts-ignore
+
   const { Map } = await google.maps.importLibrary("maps");
   //const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
 
@@ -24,6 +25,26 @@ async function initMap() {
   div.id = "cityInfo";
   div.style.display = 'none';
 
+  div.addEventListener('load', ()=> {
+    let cityName = document.getElementById("cityName").innerText;
+    let lat = document.getElementById("coords").getAttribute("lat");
+    let long = document.getElementById("coords").getAttribute("long");
+    let position = {lat: lat, lng: long};
+
+    new google.maps.Marker({
+        position: position,
+        map,
+        title: cityName,
+        icon: image,
+        }).addListener("click", () => {
+        $("#cityInfo").load("./cityData/test.html");
+        map.setCenter(position);
+        map.setZoom(6);
+        let pop = document.getElementById("cityInfo");
+        pop.style.display ='block';
+    });
+  });
+
   mapContainer.appendChild(div);
 
 
@@ -33,31 +54,8 @@ async function initMap() {
   ];
 
   cities.forEach(city => {
-    $("#cityInfo").load("./cityData/test.html").then(() => {
-        let cityName = document.getElementById("cityName").innerText;
-        let lat = document.getElementById("coords").getAttribute("lat");
-        let long = document.getElementById("coords").getAttribute("long");
-        let position = {lat: lat, lng: long};
-
-        new google.maps.Marker({
-          position: position,
-          map,
-          title: cityName,
-          icon: image,
-          }).addListener("click", () => {
-            $("#cityInfo").load("./cityData/test.html");
-            map.setCenter(position);
-            map.setZoom(6);
-            let pop = document.getElementById("cityInfo");
-            pop.style.display ='block';
-        });
-    })
-
-
+    $("#cityInfo").load("./cityData/test.html");
   });
-
-
-
 
 }
 
