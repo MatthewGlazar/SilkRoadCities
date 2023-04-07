@@ -22,13 +22,7 @@ async function initMap() {
 
   const div = document.createElement('div');
   div.id = "cityInfo";
-
-  const button = document.createElement("button");
-  button.innerText = 'X';
-  button.addEventListener('click', () => {
-	let close = document.getElementById('cityInfo');
-	close.style.display = 'none';
-  });
+  div.style.display = 'none';
 
   mapContainer.appendChild(div);
 
