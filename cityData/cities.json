@@ -10,6 +10,11 @@
 			"long": 66.975833,
 			"detailed": true
 		},
+		"Dunhuang": {
+			"lat": 40.141111,
+			"long": 94.663889,
+			"detailed": true
+		},
 		"Balkh": {
 			"lat": 36.758056,
 			"long": 66.898056
@@ -29,10 +34,6 @@
         "Beijing": {
 			"lat": 39.9042,
 			"long": 116.4074
-		},
-        "Dunhuang": {
-			"lat": 40.141111,
-			"long": 94.663889
 		},
         "Kashgar": {
 			"lat": 39.4677,
