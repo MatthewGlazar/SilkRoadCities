@@ -78,4 +78,5 @@ html, body, #mapCont {
 
 #cityInfo > p {
   text-indent: 25px;
+  line-height: 1.5em;
 }
